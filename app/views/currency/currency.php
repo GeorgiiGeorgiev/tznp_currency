@@ -108,7 +108,7 @@
 
                 <?php else:?>
 
-                    <div class="alert alert-warning" align="center">
+                    <div class="alert alert-warning emptyHistory" align="center">
                         <p>Данных о истории пока нет...</p>
                     </div>
 

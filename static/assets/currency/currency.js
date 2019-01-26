@@ -16,6 +16,8 @@ let convertResponseLoading = convertResponse.find('img.loading');// загруз
 
 let scrollUpButton = jQuery('span.scrollUp');// кнопка прокрутки страницы вверх
 
+let emptyHitoryNotice = jQuery('div.emptyHistory');
+
 jQuery(document).ready(function(){
 
     settingsSection.hide();
@@ -60,6 +62,8 @@ jQuery(convertForm).submit(function(e){
                 convertResponseValue.val(data.result);
 
                 convertResponseLoading.hide('slow');
+
+                emptyHitoryNotice.empty().html('<p>Перезагрузите страницу для обновления истории</p>');
 
             }else{
 
