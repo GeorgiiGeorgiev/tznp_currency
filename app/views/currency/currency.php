@@ -168,9 +168,9 @@
                                     ?>
                                     <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center <?php echo $checked ? 'list-group-item-info' : ''?>">
 
-                                    <span>
-                                        <?php echo $type['id'] ." - " .$type['currencyName'] . " (" . $currencySymbol . ")";?>
-                                    </span>
+                                        <span>
+                                            <?php echo $type['id'] ." - " .$type['currencyName'] . " (" . $currencySymbol . ")";?>
+                                        </span>
 
                                         <label>
                                             <input style="transform: scale(1.5);" type="checkbox" name="currencyType[<?php echo strtolower($type['id']);?>]" <?php echo $checked ? 'checked' : '';?>>

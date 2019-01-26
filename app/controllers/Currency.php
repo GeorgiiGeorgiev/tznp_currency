@@ -8,6 +8,8 @@ class Currency extends Controller
 
         $settingsTypes = $settings->getCurrencyType(true);
 
+        natsort($settingsTypes);
+
         $maxRecords = $settings->getMaxRecords();
 
         $history = History::findAll(['createDate','desc'],$maxRecords);
