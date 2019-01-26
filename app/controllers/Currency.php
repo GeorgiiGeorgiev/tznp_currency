@@ -6,7 +6,7 @@ class Currency extends Controller
     {
         $settings = Setting::find();
 
-        $settingsTypes = $settings->getCurrencyType();
+        $settingsTypes = $settings->getCurrencyType(true);
 
         $maxRecords = $settings->getMaxRecords();
 

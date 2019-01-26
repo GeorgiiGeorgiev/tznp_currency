@@ -8,7 +8,7 @@ try{
 
     $connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    $request = "CREATE TABLE IF NOT EXISTS `currency`.`settings`
+    $request = "CREATE TABLE IF NOT EXISTS " . Setting::TABLE_NAME . "
                  (
                   `id` INT NOT NULL  AUTO_INCREMENT,
                    `maxRecords` TINYINT NOT NULL DEFAULT '10' ,
