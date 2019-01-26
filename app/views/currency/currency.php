@@ -77,6 +77,10 @@
 
                 <h3 class="badge-light" align="center">История конвертаций</h3>
 
+                <div class="alert alert-warning historyResponse" align="center">
+                    <p>Перезагрузите страницу для обновления данных истории</p>
+                </div>
+
                 <?php if($history):?>
 
                 <table class="table table-hover text-center">
@@ -108,7 +112,7 @@
 
                 <?php else:?>
 
-                    <div class="alert alert-warning emptyHistory" align="center">
+                    <div class="alert alert-warning" align="center">
                         <p>Данных о истории пока нет...</p>
                     </div>
 

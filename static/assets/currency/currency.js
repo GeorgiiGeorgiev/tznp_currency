@@ -16,7 +16,7 @@ let convertResponseLoading = convertResponse.find('img.loading');// загруз
 
 let scrollUpButton = jQuery('span.scrollUp');// кнопка прокрутки страницы вверх
 
-let emptyHitoryNotice = jQuery('div.emptyHistory');
+let historyResponse = jQuery('div.historyResponse');
 
 jQuery(document).ready(function(){
 
@@ -25,6 +25,8 @@ jQuery(document).ready(function(){
     convertResponseMessage.hide();
 
     convertResponseLoading.hide();
+
+    historyResponse.hide();
 
 });
 
@@ -46,6 +48,8 @@ jQuery(convertForm).submit(function(e){
 
     convertResponseMessage.html('').hide('slow');
 
+    historyResponse.show('slow');
+
     jQuery.ajax({
         url: '/currency_api/conversation',
         type: 'GET',
@@ -63,8 +67,6 @@ jQuery(convertForm).submit(function(e){
 
                 convertResponseLoading.hide('slow');
 
-                emptyHitoryNotice.empty().html('<p>Перезагрузите страницу для обновления истории</p>');
-
             }else{
 
                 convertResponse.removeClass(['alert-info','alert-success']).addClass('alert-danger');
@@ -74,6 +76,7 @@ jQuery(convertForm).submit(function(e){
                 convertResponseLoading.hide('slow');
 
             }
+
         }
     });
 
