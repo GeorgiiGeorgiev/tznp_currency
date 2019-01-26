@@ -2,6 +2,8 @@
 
 PHP version: 7.0
 
+MySQL version: 5.6
+
 JS: ECMAScript 6
 
 Выполнить команду composer install
